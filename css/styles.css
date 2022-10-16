@@ -27,6 +27,7 @@
 --border-color: #eeeeee;
 --border-header-color: #ececec;
 --elements-grey-color: #afb1b8;
+--footer-grey-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -165,6 +166,7 @@ img {
 }
 .footer-container {
 	display: flex;
+	gap: 70px;
 }
 .footer-logo {
 	margin-bottom: 20px;
@@ -184,16 +186,32 @@ img {
 .footer-contacts {
 	display: inline-block;
 }
+.footer-social-title {
+	text-transform: uppercase;
+	color: var(--primary-white-color);
+	margin-bottom: 20px;
+}
 .footer-social-list {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
+}
+.footer-social-item {
+	border-radius: 50%;
+	background-color: var(--footer-grey-color);
 }
 .footer-social-link {
 	display: flex;
 	align-items: center;
 	width: 44px;
 	height: 44px;
+}
+.footer-social-icon {
+	fill: var(--primary-white-color);
+}
+.footer-social-item:hover,
+.footer-social-item:focus {
+	background-color: var(--accent-color);
 }
 
 
@@ -335,11 +353,13 @@ img {
 	width: 44px;
 	height: 44px;
 }
-.team-social-link:hover {
+.team-social-link:hover,
+.team-social-link:focus {
 	border-radius: 50%;
 	background-color: var(--accent-color);
 }
-.team-social-link:hover .team-social-icon {
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
 	fill: var(--primary-white-color);
 }
 .team-social-icon {
@@ -356,7 +376,6 @@ img {
 	display: flex;
 	justify-content: space-between;
 	gap: 30px;
-	fill: var(--elements-grey-color);
 }
 .customers-link {
 	display: flex;
@@ -365,6 +384,17 @@ img {
 	width: 170px;
 	height: 92px;
 	border: 1px solid var(--elements-grey-color);
+}
+.customers-icon {
+	fill: var(--elements-grey-color);
+}
+.customers-link:hover,
+.customers-link:focus {
+	border-color: var(--accent-color);
+}
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+	fill: var(--accent-color);
 }
 
 /*Стилі для portfolio.html*/
