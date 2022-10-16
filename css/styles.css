@@ -47,9 +47,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-svg {
-	fill: currentColor;
-}
 .list {
 	list-style-type: none;
 }
@@ -331,19 +328,22 @@ svg {
 	display: flex;
 	justify-content: center;
 	gap: 10px;
-	fill: var(--elements-grey-color);
-}
-.team-social-icon:hover,
-.team-social-icon:focus {
-	border-radius: 50%;
-	fill: var(--primary-white-color);
-	background-color: var(--accent-color);
 }
 .team-social-link {
 	display: flex;
 	align-items: center;
 	width: 44px;
 	height: 44px;
+}
+.team-social-link:hover {
+	border-radius: 50%;
+	background-color: var(--accent-color);
+}
+.team-social-link:hover .team-social-icon {
+	fill: var(--primary-white-color);
+}
+.team-social-icon {
+	fill: var(--elements-grey-color);
 }
 .customers {
 	text-align: center;
